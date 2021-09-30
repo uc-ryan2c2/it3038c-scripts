@@ -13,4 +13,4 @@ I want the script to ask the user if they want another password
 amd then ask if the user wants to export the password to an encrypted file so they can store all there passwords in the same place.
 
 Very future goals:
-I want to maybe turn this into a prototype app
+I want to maybe turn this into a prototype app for my self and maybe others
