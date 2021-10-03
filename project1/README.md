@@ -1,4 +1,5 @@
 <h1>Password Generator<h1>
+This script will generate a password for any application that you need a password for.
 
 <h3>How to Run the Code<h3>
 To run the code just click run and follow the prompts.
