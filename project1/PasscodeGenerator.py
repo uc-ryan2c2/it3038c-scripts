@@ -18,10 +18,11 @@ while True:
     else:
         break
 
+#This will generate a password with special characters
 if SC == 'y':
   characters = [lowercase, uppercase, special, number]
   password = random.choice(uppercase) #this makes the password begin with a uppercase
-  password_length = 10
+  password_length = 10 #this sets the password length
   for x in range(int(password_length)):
     random_set = random.choice(characters)
     random_character = random.choice(random_set)
@@ -30,6 +31,7 @@ if SC == 'y':
   print(software + " password: " + password)
   print("----------------")
 
+#this will generate a password without special characters
 elif SC == 'n':
   characters = [lowercase, uppercase, number]
   password = random.choice(uppercase)
