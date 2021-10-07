@@ -12,3 +12,4 @@ The script will then generate a password of 10 character length for the user.
 I want the script to ask the user if they want another password
 then ask if the user wants to export the password to an encrypted file so they can store all there passwords in the same place.
 I want to maybe turn this into a prototype app for my self and maybe others
+I want the user to be able to select the password length insteasd of it being a fixed at 10 characters
