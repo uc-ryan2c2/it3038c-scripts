@@ -7,19 +7,19 @@ is import the module.
 
 First, import Tkinter.
 
-'''python
+```python
 from tkinter import *
 import tkinter
-'''
+```
 
 Now that you have imported Tkinter inter, lets create out first little GUI interface
 that has the user interat with it.
 
-'''python
+```python
 root = Tk()
 canvas = tkinter.Canvas(root, width=600, height=300)
 canvas.grid(columnspan=3, rowspan=3)
-...
+```
 
 Now that you created the canvas, lets add some content onto that canvas that the user
 can interact with.
@@ -27,13 +27,13 @@ can interact with.
 Lets create a check box setup and allow the user to select either
 male or female
 
-'''python
+```python
 var1 = IntVar()
 Checkbutton(root, text='male', variable=var1).grid(row=0, sticky=W)
 var2 = IntVar()
 Checkbutton(root, text='female', variable=var2).grid(row=1, sticky=W)
 mainloop()
-'''
+```
 Once you have this down, run the code in the IDE of your choice and you will get a popup window
 that will have two check boxes with male and female options.
 
@@ -42,7 +42,7 @@ keep the canvas part of your code but delete or comment out the checkbox code.
 
 now, input the code below where the checkbox code was.
 
-'''python
+```python
 Label(root, text='First Name').grid(row=0)
 Label(root, text='Last Name').grid(row=1)
 entry1 = Entry(root)
@@ -50,7 +50,7 @@ entry2 = Entry(root)
 entry1.grid(row=0, column=1)
 entry2.grid(row=1, column=1)
 mainloop()
-'''
+```
 
 Now you will get a GUI that allows the user to input their name.
 
@@ -61,7 +61,7 @@ Same thing as the last code, comment out or delet the user input code but keep t
 canvas section.
 Now type the following into python.
 
-'''python
+```python
 lb = Listbox(canvas)
 lb.insert(1, 'python')
 lb.insert(2, 'java')
@@ -69,7 +69,7 @@ lb.insert(3, 'c++')
 lb.insert(4, 'other coding languahe')
 lb.pack()
 root.mainloop()
-'''
+```
 
 Now you have properly created a list GUI interface.
 
