@@ -50,6 +50,8 @@ elif SC == 'n':
 
 #out-put that password to a txt file that is encrypted and only they can access
 
+#create tkinter GUI application for the the passcode generator
+
 
 
 
