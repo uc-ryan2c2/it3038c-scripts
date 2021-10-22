@@ -54,7 +54,7 @@ while True:
   if answer == 'yes':
     PasscodeGenerator()
   if answer == 'no':
-    print("looks like you dont want a password, closing")
+    print("thank you for using this generator! Please come again")
     break
   
 
