@@ -11,9 +11,9 @@ special = ['$', '%', '*', '^', '@']
 
 number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
-print("Checking is log file is in current directory....")
+print("Checking if log file is in current directory....")
 
-#Check for item existence and type
+#Checks for item existence
 PassList_exist = str(path.exists("PassList.txt"))
 EC_PassList_exist = str(path.isfile("EC-PassList.txt"))
 
@@ -21,12 +21,11 @@ print("PassList exists: " + PassList_exist)
 print("Encrypted Password List: " + EC_PassList_exist)
 
 if PassList_exist == 'False' or EC_PassList_exist == 'True':
-    print("Log exist")
     if PassList_exist == 'False' and EC_PassList_exist == 'False' :
         f = open('PassList.txt', 'w')
         f.write("PASSCODES")
         f.write("\n")
-        f.write("------------------------")
+        f.write("-------------------------------------------")
         f.write("\n")
         f.close
         print("Log file has been created in current directroy")
@@ -138,8 +137,7 @@ def Encrypt(filename, key):
     data = bytearray(data)
     for index, value in enumerate(data):
         data[index] = value ^ key
-        
-    
+          
     file = open("EC-" + filename, "wb")
     file.write(data)
     file.close()
@@ -158,7 +156,7 @@ def Encrypt(filename, key):
     file = open(filename, "wb")
     file.write(data)
     file.close()
-    
+#file decryption    
 def Decrypt(filename, key):
     file = open(filename, "rb")
     data = file.read()
@@ -173,6 +171,7 @@ def Decrypt(filename, key):
     file.write(data)
     file.close()
 
+#this is the options the user has to chose
 choice = ""
 while choice != "3":
     print("Please select an option.")
@@ -185,7 +184,7 @@ while choice != "3":
       PasscodeGenerator()
     if choice == "2" or choice == "3":
       print("Please enter a key to encrypt or decrypt your password file.")
-      print("Key need to be between 1-255.")
+      print("Key needs to be between 1-255.")
       print("NOTE - PLEASE MAKE SURE TO REMEBER YOUR KEY TO DECRYPT YOUR PASSWORD FILE")
       key = int(input("Key: "))
     if choice == "2":
@@ -193,11 +192,11 @@ while choice != "3":
       if PassList_exist == 'False':
         filename = 'EC-PassList.txt'
         Encrypt(filename, key)
-        print("File has been encrypted, Please make sure to remember your key to decrypt your password.")
+        print("File has been encrypted, Please make sure to remember your key to decrypt your password file.")
       else:
         filename = 'PassList.txt'
         Encrypt(filename, key)
-        print("File has been encrypted, Please make sure to remember your key to decrypt your password.")
+        print("File has been encrypted, Please make sure to remember your key to decrypt your password file.")
     if choice == "3":
         filename = "EC-PassList.txt"
         Decrypt(filename, key)
