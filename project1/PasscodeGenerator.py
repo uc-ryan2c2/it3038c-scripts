@@ -96,10 +96,9 @@ while True:
           break
 
   if answer == 'no':
-    print("thank you for using this generator! Please come again")
+    print("thank you, please come again.")
     break
 
-print("Thank you, please come again!")
 
 
  
@@ -111,7 +110,7 @@ print("Thank you, please come again!")
 #future steps --------
 #make the file encrypted
 
-
+# See if the password generated can automatically update the application that it was generated for?
 #create tkinter GUI application for the the passcode generator
 
 
