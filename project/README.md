@@ -65,3 +65,8 @@ The file will then be decrypted and you will be able to see the contents within 
 
 That is the whole script! Thank you!<br>
 </b>
+<br>
+<b>
+Encryption credit goes to - https://www.youtube.com/watch?v=HHlInKhVz3s
+</b>
+
