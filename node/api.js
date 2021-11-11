@@ -1,3 +1,5 @@
+//Creates a webservedr with data from a json file
+
 var http = require("http");
 var data = require("./widgets.json")
 
