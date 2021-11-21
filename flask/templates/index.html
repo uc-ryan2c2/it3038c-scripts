@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<P><em>what is your name?</em>
+    <form action="/welcome" method="POST">
+    <input name="myName">
+    <input type="submit" value="submit">
+</form>
+</P>
+
+
+{% endblock %}
