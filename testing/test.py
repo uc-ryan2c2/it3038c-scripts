@@ -9,21 +9,17 @@ from cryptography.fernet import Fernet
 
 #Checks for item existence
 PassList_exist = str(path.exists("PassList.txt"))
-EC_PassList_exist = str(path.isfile("EC-PassList.txt"))
-
 print("PassList exists: " + PassList_exist)
-print("Encrypted Password List: " + EC_PassList_exist)
 
 #this will create a file if the file does not already exist
-if PassList_exist == 'False' or EC_PassList_exist == 'True':
-    if PassList_exist == 'False' and EC_PassList_exist == 'False' :
-        f = open('PassList.txt', 'w')
-        f.write("PASSCODES")
-        f.write("\n")
-        f.write("-------------------------------------------")
-        f.write("\n")
-        f.close
-        print("Log file has been created in current directroy")
+if PassList_exist == 'False':
+  f = open('PassList.txt', 'w')
+  f.write("PASSCODES")
+  f.write("\n")
+  f.write("-------------------------------------------")
+  f.write("\n")
+  f.close
+  print("Log file has been created in current directroy")
 
 #main window
 if __name__=="__main__":
@@ -99,9 +95,9 @@ def PasswdGenerator():
       # Radio Buttons for deciding the
       # strength of password
       # Default strength is Medium
-      radio_middle = Radiobutton(TLroot, text="Medium", variable=var, value=0)
+      radio_middle = Radiobutton(TLroot, text="No Symbols", variable=var, value=0)
       radio_middle.grid(row=1, column=2, sticky='E')
-      radio_strong = Radiobutton(TLroot, text="Strong", variable=var, value=3)
+      radio_strong = Radiobutton(TLroot, text="Can Include Symbols", variable=var, value=3)
       radio_strong.grid(row=1, column=3, sticky='E')
       combo = Combobox(TLroot, textvariable=var1)
 
@@ -178,10 +174,10 @@ def Decrypt():
 frame = LabelFrame(root, text="Please Select An Option Below", padx=15, pady=15,)
 frame.grid(row=1, column=0, pady=30, padx=30)
 #Main Buttons
-GenPasswd = Button(frame, text="Generate Password", padx=67, pady=15, fg="black", bg="gray", command=PasswdGenerator)
-Bencrypt = Button(frame, text="Encrypt Password File", padx=60, pady=15, fg="black", bg="gray", command=Encrypt)
-BDecrypt = Button(frame, text="Decrypt Password File", padx=59, pady=15, fg="black", bg="gray", command=Decrypt)
-Bclose = Button(frame, text="Close", padx=60, pady=15, command=root.quit, fg="black", bg="gray")
+GenPasswd = Button(frame, text="Generate Password", padx=67, pady=15, fg="black", bg="white", command=PasswdGenerator)
+Bencrypt = Button(frame, text="Encrypt Password File", padx=60, pady=15, fg="black", bg="white", command=Encrypt)
+BDecrypt = Button(frame, text="Decrypt Password File", padx=59, pady=15, fg="black", bg="white", command=Decrypt)
+Bclose = Button(frame, text="Close", padx=60, pady=15, command=root.quit, fg="black", bg="white")
 #main button layout
 Label1.grid(row=0, column=0)
 GenPasswd.grid(row=1, column=0, columnspan=4)
