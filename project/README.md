@@ -26,7 +26,7 @@ The other modules used in this application should already be pre-intalled with p
 <br>
 Once you have the required modules installed, run the code and a windows like the one below should pop-up.
 <br>
-<img src="HomeScreen.png" alt="a" width="200"/>
+<img src="Pictures/HomeScreen.png" alt="a" width="200"/>
 <br>
 Once you have first ran the program and you get the window above to open, please close the program. This needs to be done since this script will generate your password file in the directory that you ran the program in. The program needs to be closed so the file can be saved so the next time you run the program, you will be able to save passwords to the file along with being able to encrypt and decrypt the file. A file named "PassList.txt" should have been created within your current directory.
 <br>
