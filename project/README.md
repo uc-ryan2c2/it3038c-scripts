@@ -12,11 +12,13 @@ Once you have pasted the code into your prefered IDE, you will then need to inst
 </b>
 First you will need install the modules below. <br>
 <br>
-'''
+
 pip install cryptography
+<br>
 pip install Fernet
+<br>
 pip install pyperclip
-'''
+
 <br>
 The other modules used in this application should already be pre-sintalled with python so you wont need to install them.
 <br>
