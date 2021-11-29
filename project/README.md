@@ -65,6 +65,7 @@ That is all!
 <br>
 
 References
+<br>
 Password Gen - https://www.geeksforgeeks.org/python-random-password-generator-using-tkinter/
 <br>
 Part of the Encryption - https://www.geeksforgeeks.org/how-to-encrypt-and-decrypt-strings-in-python/
