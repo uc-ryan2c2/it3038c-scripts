@@ -64,6 +64,7 @@ Once you are done with the application, you can press close to close out of the 
 That is all!
 <br>
 
+<br>
 References
 <br>
 Password Gen - https://www.geeksforgeeks.org/python-random-password-generator-using-tkinter/
