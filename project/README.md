@@ -62,4 +62,11 @@ Next, you will want to access your password at some point and to do that just pr
 Once you are done with the application, you can press close to close out of the app.
 <br>
 That is all!
+<br>
+
+References
+Password Gen - https://www.geeksforgeeks.org/python-random-password-generator-using-tkinter/
+Part of the Encryption - https://www.geeksforgeeks.org/how-to-encrypt-and-decrypt-strings-in-python/
+
+
 
