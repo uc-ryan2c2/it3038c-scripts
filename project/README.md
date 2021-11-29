@@ -39,10 +39,10 @@ Click the "Encrypt Password File" button on the home screen and a yes or no wind
 <img src="EnPass.png" alt="a" width="400"/>
 <br>
 <h3>Before Encryption</h3>
-<img src="PassList.png" alt="a" width="400"/>
+<img src="PassList.png" alt="a" width="500"/>
 <br>
 <h3>After Encryption</h3>
-<img src="EnPassList.png" alt="a" width="400"/>
+<img src="EnPassList.png" alt="a" width="700"/>
 As you can see, this is a good way to keep your password safe!
 <br>
 Next, you will want to access your password at some point and to do that just press the "Decrypt Password File" button and a window will open and ask if you want to decrypt your password file. See images Below.
@@ -50,10 +50,10 @@ Next, you will want to access your password at some point and to do that just pr
 <img src="DePass.png" alt="a" width="400"/>
 <br>
 <h3>Before Decryption</h3>
-<img src="EnPassList.png" alt="a" width="400"/>
+<img src="EnPassList.png" alt="a" width="700"/>
 <br>
 <h3>After Decryption</h3>
-<img src="PassList.png" alt="a" width="400"/>
+<img src="PassList.png" alt="a" width="500"/>
 <br>
 Once you are done with the application, you can press close to close out of the app.
 <br>
