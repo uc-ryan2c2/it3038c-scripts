@@ -19,8 +19,8 @@ pip install Fernet
 <br>
 pip install pyperclip
 <br>
-Once done, Please restart your session so Python can see the newly installed modules.
 
+Once done, Please restart your session so Python can see the newly installed modules.
 <br>
 The other modules used in this application should already be pre-intalled with python so you wont need to install them.
 <br>
