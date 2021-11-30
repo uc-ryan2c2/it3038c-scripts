@@ -34,70 +34,67 @@ def PasswdGenerator():
       TLroot = Toplevel()
       TLroot.title("Password Generator")
       TLroot.geometry("500x150")
-      def low():
+      def PassGen():
         entry.delete(0, END)
  
         # Get the length of password
         length = var1.get()
  
-        MediumPas = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-        StrongPas = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !@#$%^&*()"
+        MediumPas = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+             'v', 'w', 'x', 'y', 'z', 'A', 'B' 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+             'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+        StrongPas = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+             'v', 'w', 'x', 'y', 'z', 'A', 'B' 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+             'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '$', '%', '*', '^', '@']
         password = ""
 
-        # if strength selected is medium
+        # if strength selected is without special characters
         if var.get() == 0:
           for i in range(0, length):
               password = password + random.choice(MediumPas)
           return password
  
-          # if strength selected is strong
+          # if strength selected is with special characters
         elif var.get() == 3:
           for i in range(0, length):
             password = password + random.choice(StrongPas)
           return password
-        else:
-          print("Please choose an option")
  
- 
-      # Function for generation of password
+      # Function for generation of password in Tkinter
       def generate():
-            password1 = low()
+            password1 = PassGen()
             entry.insert(10, password1)
  
  
       # Function for copying password to clipboard
-      def copy1():
+      def copy():
             random_password = entry.get()
             pyperclip.copy(random_password)
       
       #Function to save password to file
             
-      # create label and entry to show
-      # password generated
+      # create label and entry to show password generated
       Random_password = Label(TLroot, text="Password")
       Random_password.grid(row=0)
       entry = Entry(TLroot)
       entry.grid(row=0, column=1)
  
-      # create label for length of password
+      # label for length of password
       c_label = Label(TLroot, text="Length")
       c_label.grid(row=1)
  
-      # create Buttons Copy which will copy
-      # password to clipboard and Generate
-      # which will generate the password
-      copy_button = Button(TLroot, text="Copy", command=copy1)
+      # create Buttons Copy which will copy password to clipboard and Generate password
+      copy_button = Button(TLroot, text="Copy", command=copy)
       copy_button.grid(row=0, column=2)
       generate_button = Button(TLroot, text="Generate", command=generate)
       generate_button.grid(row=0, column=3)
  
-      # Radio Buttons for deciding the
-      # strength of password
-      # Default strength is Medium
+      # Radio Buttons for deciding the strength of password
       radio_middle = Radiobutton(TLroot, text="No Symbols", variable=var, value=0)
       radio_middle.grid(row=1, column=2, sticky='E')
       radio_strong = Radiobutton(TLroot, text="Can Include Symbols", variable=var, value=3)
       radio_strong.grid(row=1, column=3, sticky='E')
+      #this will allow you to select one value in a set of values
       combo = Combobox(TLroot, textvariable=var1)
 
       # Combo Box for length of your password
@@ -130,8 +127,7 @@ def Encrypt():
     # encrypting the file
     encrypted = fernet.encrypt(original)
   
-    # opening the file in write mode and 
-    # writing the encrypted data
+    # opening the file in write mode and writing the encrypted data
     with open('PassList.txt', 'wb') as encrypted_file:
         encrypted_file.write(encrypted)
     Label3 = Label(root, text="Password file has been ecrypted")
@@ -157,8 +153,7 @@ def Decrypt():
     # decrypting the file
     decrypted = fernet.decrypt(encrypted)
   
-    # opening the file in write mode and
-    # writing the decrypted data
+    # opening the file in write mode and writing the decrypted data
     with open('PassList.txt', 'wb') as dec_file:
         dec_file.write(decrypted)
     Label6 = Label(root, text="File has been decrypted")
